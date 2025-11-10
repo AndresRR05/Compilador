@@ -1,8 +1,8 @@
-from rest_frameworok.decorators import api_view
-from rest_frameworok.response import Response
-from rest_frameworok import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from rest_framework import status
 
-@api_view('POST')
+@api_view(['POST'])
 def main(request):
     return Response(
         {"mensaje":"Hola"},
