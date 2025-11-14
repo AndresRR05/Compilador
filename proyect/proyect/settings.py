@@ -60,12 +60,14 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://localhost:5174",
-    "https://compilador-eight.vercel.app/"
+    "https://compilador-eight.vercel.app"
 ]
 
-CORS_ALLOWED_ALL_ORIGINS = True
+# Nota: la opción correcta es CORS_ALLOW_ALL_ORIGINS (sin "ED").
+# Si quieres permitir todos los orígenes (útil en desarrollo), usa
+# CORS_ALLOW_ALL_ORIGINS = True. En producción, lista orígenes exactos
+# con CORS_ALLOWED_ORIGINS y deja CORS_ALLOW_ALL_ORIGINS = False.
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'proyect.urls'
 
