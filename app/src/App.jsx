@@ -16,6 +16,8 @@ function App() {
     setLoading(true);
     setOutput(''); //Limpiar salida anterior
     try {
+      // app/src/App.jsx
+      //const req = await axios.post('http://127.0.0.1:8000/api/code', code);
       const req = await axios.post('https://compilador-q2lo.onrender.com/api/code', code);
       setOutput(req.data.output);
     } catch(error){

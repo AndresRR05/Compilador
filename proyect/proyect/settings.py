@@ -26,8 +26,11 @@ SECRET_KEY = 'django-insecure-io25oqbcuefkg8mfs4fl(h72=u0#(@!ukzwfk1uf2qc1o4(0c@
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
     '127.0.0.1:5173',
     'compilador-q2lo.onrender.com'
+
 ]
 
 
@@ -54,6 +57,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:5174"
 ]
 
 CORS_ALLOWED_ALL_ORIGINS = True
